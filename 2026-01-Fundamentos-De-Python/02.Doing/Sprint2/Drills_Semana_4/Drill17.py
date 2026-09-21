@@ -1,0 +1,18 @@
+# DRILL 7: AUTENTICACIÓN BIO-DIGITAL — BASE ARES
+
+# TODO 1: Crea una variable 'clave_maestra' con el valor "ares2024".
+
+# TODO 2: Usa input() para pedir el intento de acceso.
+# Guárdalo en una variable llamada 'intento'.
+
+# TODO 3: Escribe un if/else:
+# - Si el intento coincide con la clave maestra, imprime un mensaje de acceso concedido.
+# - Si no coincide, imprime una alerta de intrusión.
+
+clave_maestra = 'ares2024'
+intento = input('ingresa el intento: ')
+
+if intento == clave_maestra:
+    print('Acceso concedido')
+else:
+    print('Alerta de intrusión')
