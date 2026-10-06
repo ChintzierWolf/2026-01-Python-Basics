@@ -37,3 +37,31 @@ print("Fuera del bucle")
 # Introduce tu opción: b
 # Introduce tu opción: A
 # Fuera del bucle
+
+# contador = 10
+# while contador > 0:
+#     contador = contador - 2
+#     if contador == 4:
+#         break
+# print(contador)
+
+# ¿Qué imprime el programa?
+
+# Imprime lo siguiente:
+# 8
+# 6
+
+for i in range(3):
+    print("Antes")
+    break
+    print("Después")
+print("Fin")
+
+# ¿Qué imprime el programa?
+# Imprime lo siguiente:
+# Antes
+# Fin
+
+# Ya que 'break' detiene el bucle cuando la variable 'i' es igual a 3.
+# El 3 representa la cantidad de iteraciones que se van a realizar.
+# No se imprime "Después" porque 'break' detiene el bucle.
