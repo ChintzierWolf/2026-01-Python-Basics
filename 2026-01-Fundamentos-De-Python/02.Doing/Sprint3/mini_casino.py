@@ -32,7 +32,6 @@
 # un carácter aleatorio (random.choice(caracteres)) a 'password' en cada
 # vuelta. Imprime la contraseña final.
 
-
 import random
 
 # === JUEGO 1: Lanzar dos dados ===
@@ -48,11 +47,15 @@ if suma == 7:
 else:
     print("Sigue intentando")
 
+# random.randint() -> permite generar números aleatorios enteros entre 1 y 6
+
 # === JUEGO 2: Sorteo de premio ===
 
 participantes = ["Cesar", "Alex", "Ana", "Luis", "Sofia", "Juan"]
 ganador = random.choice(participantes)
 print(f"El ganador es: {ganador}")
+
+# random.choice() -> permite elegir un elemento aleatorio de una lista
 
 # === JUEGO 3: Lotería (5 números del 1 al 50) ===
 
@@ -62,6 +65,8 @@ for i in range(5):
     numeros_loteria.append(numero)
 print(f"Los números de la lotería son: {numeros_loteria}")
 
+# append() -> permite agregar elementos a una lista
+
 # === BONUS (opcional): Contraseña aleatoria de 6 caracteres ===
 
 caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -69,3 +74,6 @@ password = ""
 for i in range(6):
     password += random.choice(caracteres)
 print(f"La contraseña es: {password}")
+
+# += -> permite agregar elementos a una variable, en este caso, caracteres a la variable password
+# random.choice() -> permite elegir un elemento aleatorio de una lista
