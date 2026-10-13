@@ -35,3 +35,15 @@ print(incidentes2, "insert() inserta el elemento en la posicion indicada", incid
 
 incidentes3 = incidentes.pop(0)
 print(incidentes3, "pop() elimina el elemento indicado", incidentes, "\n")
+
+# Para imprimir los elementos de la lista de manera de cascada, se puede usar un ciclo for
+for incidente in incidentes:
+    print(incidente)
+
+print("\n")
+
+# Tambien se puede usar un ciclo while
+i = 0
+while i < len(incidentes):
+    print(incidentes[i])
+    i += 1
