@@ -56,24 +56,31 @@ while True:
 
         #Validamos que el numero sea correcto
         if 0 <= indice < len(tareas):
+            # si el numero de la tarea esta en el rango de la lista, se elimina
             tareas.pop(indice)
+            #pop() es un metodo que elimina un elemento de una lista dado su indice.
+            #len() es la longitud de la lista
+            # 0 <= indice < len(tareas) es una validacion que asegura que el indice este dentro del rango de la lista
         else:
             print("Esa tarea no existe")
 
     #4 ORDENAR TAREAS
     elif opcion == "4":
         for tarea in sorted(tareas):
+            #sorted() es una funcion que ordena una lista de forma ascendente por defecto
             print(tarea)
 
     #5 RESUMEN (tareas, 4)
     elif opcion == "5":
         total_tareas = len(tareas)
         por_dia = 4
+        #math.ceil() es una funcion que redondea un numero hacia arriba
         promedio = math.ceil(total_tareas / por_dia)
-        
+        #se calcula el promedio redondeado hacia arriba
         print(f"Total de tareas: {total_tareas}")
+        #se imprime el promedio redondeado hacia arriba
         print(f"Promedio de tareas por dia: {promedio}")
-    
+
     #6 SALIR
     elif opcion == "6":
         print("Cerrando el sistema...")
