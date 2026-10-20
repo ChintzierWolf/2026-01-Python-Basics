@@ -57,6 +57,7 @@ while True:
         
         # Generar incidente con ID INC-xxx
         incidente_con_id = f"INC-{len(lista_incidentes) + 1:03d}"
+        #El 1:3d significa que el número se formateará con 3 dígitos, rellenando con ceros a la izquierda si es necesario
         if not incidente_sin_id:
             print("No se puede registrar un incidente sin descripción")
             continue
@@ -84,6 +85,8 @@ while True:
             continue
         else:
             pos = int(input("Ingrese el ID del incidente a cerrar: ").strip())
+            #El strip elimina espacios en blanco al inicio y final de la cadena
+            #El int convierte el número a entero
             if pos < 1 or pos > len(lista_incidentes):
                 print(f"Número fuera de rango. Hay {len(lista_incidentes)} incidentes.")
                 continue
@@ -98,6 +101,7 @@ while True:
             print("No hay incidentes para buscar")
         else:
             incidente_buscado = input("Ingrese el ID del incidente a buscar: ").strip()
+            #El strip elimina espacios en blanco al inicio y final de la cadena
             encontrado = False
             for ticket in lista_incidentes:
                 if incidente_buscado in ticket:
@@ -113,6 +117,95 @@ while True:
     if menu == "5":
         print("Sesión cerrada. Hasta el próximo turno.")
         break
+
+"""
+
+lista_incidentes = ["INC-001: Impresora bloqueada", "INC-002: Correo no envía emails", "INC-003: No puedo conectarme a la red WiFi"]
+
+#---------------------------------------------------------------------------------------------------------------
+
+while True:
+    print("MENÚ DE INCIDENTES")
+    print("1. Registrar nuevo incidente")
+    print("2. Listar todos los incidentes abiertos")
+    print("3. Cerrar un incidente (por número de posición)")
+    print("4. Buscar si un incidente existe (por ID exacto)")
+    print("5. Salir del sistema")
+    
+    menu = input("Seleccione una opción: ").strip()
+    
+    if menu not in ["1","2","3","4","5"]:
+        print("Opción inválida. Intenta elegir una opción nuevamente")
+        continue
+    
+    # Ingresar nuevo incidente
+    if menu == "1":
+        incidente_sin_id = input("Ingrese el nuevo incidente: ").strip()
+        
+        # Generar incidente con ID INC-xxx
+        incidente_con_id = f"INC-{len(lista_incidentes) + 1:03d}"
+        #El 1:3d significa que el número se formateará con 3 dígitos, rellenando con ceros a la izquierda si es necesario
+        if not incidente_sin_id:
+            print("No se puede registrar un incidente sin descripción")
+            continue
+        
+        # Agregar incidente a la lista
+        lista_incidentes.append(incidente_con_id + ": " + incidente_sin_id)
+        print(f"Incidente registrado: {incidente_con_id}")
+        continue
+    
+    # Listar incidentes
+    if menu == "2":
+        if not lista_incidentes:
+            print("No hay incidentes abiertos")
+        else:
+            print("Incidentes abiertos")
+            print("-" * 25)
+            for i in range(len(lista_incidentes)):
+                print(f"{i + 1}. {lista_incidentes[i]}")
+        continue
+
+    # Cerrar incidente
+    if menu == "3":
+        if not lista_incidentes:
+            print("No hay incidentes para cerrar")
+            continue
+        else:
+            pos = int(input("Ingrese el ID del incidente a cerrar: ").strip())
+            #El strip elimina espacios en blanco al inicio y final de la cadena
+            #El int convierte el número a entero
+            if pos < 1 or pos > len(lista_incidentes):
+                print(f"Número fuera de rango. Hay {len(lista_incidentes)} incidentes.")
+                continue
+            
+            cerrado = lista_incidentes.pop(pos - 1)
+            print(f"Incidente {cerrado} cerrado exitosamente.")
+            continue
+
+    # Buscar incidente por ID
+    if menu == "4":
+        if not lista_incidentes:
+            print("No hay incidentes para buscar")
+        else:
+            incidente_buscado = input("Ingrese el ID del incidente a buscar: ").strip()
+            #El strip elimina espacios en blanco al inicio y final de la cadena
+            encontrado = False
+            for ticket in lista_incidentes:
+                if incidente_buscado in ticket:
+                    encontrado = True
+                    break
+            if encontrado:
+                print("Encontrado", incidente_buscado)
+            else:
+                print("No se encontró ese ID")
+            continue
+
+    # Salir del sistema
+    if menu == "5":
+        print("Sesión cerrada. Hasta el próximo turno.")
+        break
+
+"""
 
 # ==============================================================================
 # SUGERENCIAS DE MEJORA Y OBSERVACIONES (REVISIÓN DE REGLAS DE NEGOCIO)
