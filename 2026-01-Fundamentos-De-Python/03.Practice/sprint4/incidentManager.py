@@ -44,6 +44,7 @@ print(f"\nIncidente agregado: {incidentes.append}")
 print(f"\nLista actualizada de incidentes: {incidentes}")
 print(f"Total de incidentes: {len(incidentes)}")
 
+
 # TODO 5
 buscador = "generador zona VIP con fluctuación"
 if buscador in incidentes:
