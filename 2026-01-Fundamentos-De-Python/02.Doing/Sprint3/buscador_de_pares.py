@@ -24,13 +24,15 @@
 
 numeros = [1, 3, 5, 7, 8, 11, 13, 16, 19]
 
+print("Buscando el primer número par...")
+
 for numero in numeros:
     print(f"Revisando {numero}...")
     if numero % 2 == 0:
         print(f"¡Encontrado! El primer par es {numero}")
         break
 
-print("Números impares de la lista:")
+print("\nNúmeros impares de la lista:")
 for numero in numeros:
     if numero % 2 == 0:
         continue

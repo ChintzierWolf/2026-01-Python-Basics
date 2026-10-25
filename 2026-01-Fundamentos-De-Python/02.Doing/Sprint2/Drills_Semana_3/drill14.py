@@ -10,7 +10,6 @@
 # Ejemplo de salida:
 # "¿Comando reconocido?: [acceso_cabina]"
 
-print(f"")
 comando = input("¿Cuál es el comando de voz?: ")
 
 acceso_cabina = comando == "activar" or comando == "Activar"

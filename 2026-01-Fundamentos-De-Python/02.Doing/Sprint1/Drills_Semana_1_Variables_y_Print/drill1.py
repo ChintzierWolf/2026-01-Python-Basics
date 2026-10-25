@@ -16,7 +16,7 @@ nombre_festival = "SonidoLibre"
 num_bandas = 12
 num_asistentes = 400
 
-print(f"{nombre_festival} — {num_bandas} bandas — {num_asistentes} asistentes confirmados")
+print(nombre_festival, "—", num_bandas, "bandas —", num_asistentes, "asistentes confirmados")
 
 # Evaluación
 # 
