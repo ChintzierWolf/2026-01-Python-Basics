@@ -71,7 +71,7 @@ encontrado = False
 
 for empleado in empleados:
     if "nombre" in empleado and empleado["nombre"] == busc_nombre:
-        print(f"\n Empleado encontrado: ")
+        print(f"\n Empleado encontrado: {busc_nombre}")
         for clave, valor in empleado.items():
             print(f" {clave} : {valor}")
         encontrado = True
