@@ -18,7 +18,7 @@ No queremos escribir la suma 40 veces. Queremos una máquina que;
 dándole el sueldo y bono, devuelva el bruto
 """
 
-def calcular_pago_bruto(sueldo_bsse, bono)
+def calcular_pago_bruto(sueldo_base, bono):
     bruto = sueldo_base + bono
     return bruto 
 
@@ -47,10 +47,10 @@ empleados = [
 
 for persona in empleados:
     bruto = calcular_pago_bruto(persona["sueldo"], persona["bono"])
-    print(f"Empleado: {persona["emp"]})
+    print(f"Empleado: {persona["emp"]}")
 
 
- """
+"""
 mini drill 2
 Un compañero llamó así s la función:
     pago = calcular_pago_bruto(2000,18000)
@@ -70,14 +70,14 @@ Luego, para el emp 103 (bruto 35000) con tass de 0.12, imprime;
 usando las dos funciones (primero el bruto, luego el umpirs6sobre ese bruto)
 """
 
-def calcular_impuesto(monto, tasa)
+def calcular_impuesto(monto, tasa):
     impuesto = monto * tasa
     return impuesto
 
 bruto = calcular_pago_bruto(30000, 5000)
 print(f"Impuesto al sueldo bruto: {bruto}: {calcula,_impuesto(bruto, 0.12)}")
 
-print(calcular_impuesto(calcular_pago_bruto(30000, 5000), 0.12)
+print(calcular_impuesto(calcular_pago_bruto(30000, 5000), 0.12))
 
 """
 def calcular_neto(bruto, tasa):
