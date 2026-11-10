@@ -7,7 +7,9 @@ Nómina tiene una regla: un salario es Válido si este entre 8000 y 200000
 Necesitamos una función que, dado un salario, responda Si o No
 """
 
-def es_salario_
+def es_salario_valido():
+    return 
+
 """
 recordar para que es el doc string dentro de una función 
 """
