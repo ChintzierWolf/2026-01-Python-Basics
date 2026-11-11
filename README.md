@@ -22,7 +22,7 @@ Esta sección está estructurada bajo una metodología de aprendizaje práctico.
 
 Esta carpeta es una ruta de estudio intensiva enfocada 100% en los temas del examen de certificación **PCEP-30-02**. Está dividida de manera cronológica para mantener el ritmo:
 
-- **`semana-1/` a `semana-6/`:** Material de estudio, apuntes específicos del temario (syllabus), ejercicios de preparación y simuladores estructurados cronológicamente a lo largo de 6 semanas de estudio intensivo.
+- **`semana-1/` a `semana-6/`:** Material de estudio, apuntes específicos del temario (syllabus), ejercicios de preparación y simuladores estructurados cronológicamente a lo largo de 11 semanas de estudio intensivo.
 
 ---
 
