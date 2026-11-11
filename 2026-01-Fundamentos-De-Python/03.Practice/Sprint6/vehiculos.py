@@ -1,3 +1,6 @@
+# Funciones
+
+# Función que pide al usuario los datos del vehiculo
 def pedir_vehiculos():
     marca       = input("Ingrese la marca del vehiculo           : ")
     modelo      = input("Ingrese el modelo del vehiculo          : ")
@@ -6,6 +9,7 @@ def pedir_vehiculos():
 
     return marca, modelo, anio, kilometraje
 
+# Función que registra el vehiculo
 def registrar_vehivulo(flota, marca, modelo, anio, kilometraje):
     vehiculo = {
         "marca": marca,
@@ -15,8 +19,10 @@ def registrar_vehivulo(flota, marca, modelo, anio, kilometraje):
     }
 
     flota.append(vehiculo)
+    # .append() sirve para agregar un elemento a una lista y .pop() sirve para quitar un elemento a una lista.
     print(f"\n>>>>>Vehiculo {marca} {modelo} agregado exitosamente!\\n")
 
+# Programa principal
 flota = []
 
 marca, modelo, anio, kilometraje = pedir_vehiculos()
