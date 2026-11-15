@@ -1,4 +1,7 @@
 def a_farenheit(grados_celsius):
+    # grados_celsius es el parametro que se recibe
+    # se multiplica por 9/5 y se le suma 32
+    # se guarda en la variable resultado
     resultado = (grados_celsius * 9/5) + 32
     return resultado
 

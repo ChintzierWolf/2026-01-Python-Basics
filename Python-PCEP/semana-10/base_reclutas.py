@@ -111,3 +111,13 @@ while True:
 
     if opcion == "6":
         break
+
+
+# Observaciones
+# Tu código resuelve un sistema de gestión de reclutas, pero NO es el ejercicio que se pidió. 
+# El enunciado solicita específicamente 8 funciones (limpiar_string, validar_email, 
+# dar_alta_recluta, listar_reclutas, buscar_recluta, actualizar_puntos, mostrar_estadisticas)
+# más un menú con 6 opciones. Tu entrega implementa solo un menú con 4 opciones (Alta, Listado, 
+# Buscar, Salir) sin estructurar el código en funciones ni cumplir con validaciones críticas: no hay validación de edad,
+# email o rangos de puntos; no hay función para actualizar puntos; no hay estadísticas; 
+# y el menú tiene solo 4 opciones en lugar de 6. Aunque tu código funciona para lo que propone, no resuelve el ejercicio asignado.

@@ -77,7 +77,7 @@ print("\n--- NOMBRE ---")
 nombre_partes = nombre_limpio.split()
 if len(nombre_partes) >= 2:
     primer_nombre = " ".join(nombre_partes[:1])
-    apellido = " ".join(nombre_partes[2:])
+    apellido = " ".join(nombre_partes[1:])
     print(f'Primer nombre: "{primer_nombre}"')
     print(f'Apellido: "{apellido}"')
 else:

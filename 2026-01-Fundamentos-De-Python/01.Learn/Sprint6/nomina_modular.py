@@ -13,19 +13,41 @@
 
 # TODO 1: Declara tasa_impuesto = 0.12 UNA SOLA VEZ aquí arriba.
 
+tasa_impuesto = 0.12
+
 # TODO 2: Define calcular_pago_bruto(sueldo_base, bono)
 # que devuelva con return la suma de ambos.
+
+def calcular_pago_bruto(sueldo_base, bono):
+    resultado = sueldo_base + bono
+    return resultado
 
 # TODO 3: Define calcular_neto(bruto, tasa)
 # que devuelva con return bruto - (bruto * tasa).
 
+def calcular_neto(bruto, tasa):
+    resultado = bruto - (bruto * tasa)
+    return resultado
+
 # TODO 4: Define es_salario_valido(sueldo_base)
 # que devuelva True si 8000 <= sueldo_base <= 200000.
+
+def es_salario_valido(sueldo_base):
+    if 8000 <= sueldo_base <= 200000:
+        return True
+    else:
+        return False
 
 # TODO 5: Procesa estos 3 empleados usando las funciones, validando ANTES de calcular:
 # emp1: sueldo 20000, bono 2000
 # emp2: sueldo 25000, bono 0
 # emp3: sueldo 500, bono 100  <-- salario invalido, debe rechazarse
+
+empleados = [
+    ("Empleado 1", 20000, 2000),
+    ("Empleado 2", 25000, 0),
+    ("Empleado 3", 500, 100)
+]
 
 # TODO 6: Agrega un BLOQUE DE RESUMEN.
 # Declara procesados = 0, rechazados = 0, total_neto = 0 ANTES del loop.
@@ -35,6 +57,25 @@
 #   Empleados procesados: <procesados>
 #   Empleados rechazados: <rechazados>
 #   Total neto a depositar: $<total_neto>
+
+procesados = 0
+rechazados = 0
+total_neto = 0
+
+for nombre, sueldo, bono in empleados:
+    if es_salario_valido(sueldo):
+        bruto = calcular_pago_bruto(sueldo, bono)
+        neto = calcular_neto(bruto, tasa_impuesto)
+        print(f"{nombre} | Bruto: ${bruto} | Neto: ${neto}")
+        procesados += 1
+        total_neto += neto
+    else:
+        print(f"{nombre} | RECHAZADO: salario fuera de rango ({sueldo})")
+        rechazados += 1
+
+print(f"Empleados procesados: {procesados}")
+print(f"Empleados rechazados: {rechazados}")
+print(f"Total neto a depositar: ${total_neto}")
 
 # Salida esperada:
 # Empleado 1 | Bruto: $22000 | Neto: $19360.0
