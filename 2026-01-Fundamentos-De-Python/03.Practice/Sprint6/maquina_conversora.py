@@ -15,3 +15,4 @@ def a_celsius(grados_fahrenheit):
 
 clima2 = a_celsius(100)
 print(f"100 grados fahrenheit son {clima2} grados celsius")
+

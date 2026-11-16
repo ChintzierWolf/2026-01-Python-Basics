@@ -73,6 +73,18 @@ for nombre, sueldo, bono in empleados:
         print(f"{nombre} | RECHAZADO: salario fuera de rango ({sueldo})")
         rechazados += 1
 
+# El ejercicio espera que los empleados se procesen dentro de un ciclo for para evitar duplicar código 
+# (que es justo lo que el ejercicio llama "refactor del espagueti"). 
+# Para ello, en el TODO 5 los 3 empleados deben agruparse en una lista iterable 
+# (por ejemplo, una lista de tuplas con el nombre, sueldo y bono).
+
+# Las funciones creadas no se estaban utilizando: 
+# Se definieron calcular_pago_bruto, calcular_neto y es_salario_valido, pero no se invocaban en ninguna parte.
+
+# Faltan las impresiones individuales y el símbolo $: 
+# En cada iteración del loop se debe mostrar el resultado del empleado o el motivo de rechazo, 
+# tal como lo indica la salida esperada al final del archivo:
+
 print(f"Empleados procesados: {procesados}")
 print(f"Empleados rechazados: {rechazados}")
 print(f"Total neto a depositar: ${total_neto}")
