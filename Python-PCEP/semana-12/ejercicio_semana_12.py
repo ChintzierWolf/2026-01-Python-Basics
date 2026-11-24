@@ -36,14 +36,11 @@ Patrimonio=0 -> mensaje de error claro, NO se cae
 
 import os
 
-
 def calcular_razon_endeudamiento(pasivos, patrimonio):
     return pasivos / patrimonio
 
-
 def calcular_margen_nomina(utilidad, nomina):
     return utilidad / nomina
-
 
 print(f"Directorio actual: {os.getcwd()}")
 if os.path.exists("bitacora.txt"):
